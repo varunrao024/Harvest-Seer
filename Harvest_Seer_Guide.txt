@@ -1,0 +1,142 @@
+Harvest Seer – AI-Powered Crop Risk Assessment System
+
+Empowering farmers with intelligent, data-driven agricultural insights using real-time environmental data and machine learning.
+
+------------------------------------------------------------
+1. Problem Statement
+
+Modern agriculture faces major challenges affecting crop yield and farmer livelihoods:
+
+- Environmental uncertainty from changing weather and climate.
+- Lack of actionable insights from complex data.
+- Poor risk management leading to crop failures.
+- Fragmented data across multiple systems.
+
+Harvest Seer solves these by:
+- Analyzing real-time environmental data (temperature, rainfall, soil, NDVI).
+- Predicting crop risks using machine learning.
+- Providing actionable recommendations.
+- Supporting both coordinate entry and map-based farm selection.
+
+------------------------------------------------------------
+2. Key Features
+
+Core:
+- Interactive map for farm selection.
+- Multi-crop analysis (Wheat, Rice, Cotton, etc.).
+- Real-time risk scoring and factor analysis.
+- AI-driven recommendations.
+- Visual analytics with charts and heatmaps.
+- Integration with weather and soil data.
+
+Advanced:
+- Trained ML models for accurate prediction.
+- Transparent risk formulas.
+- 7-day weather forecasting.
+- Responsive design with dark mode.
+
+------------------------------------------------------------
+3. Setup Requirements
+
+Prerequisites:
+- Node.js (v18+), Python (v3.8+), pip, npm.
+- Internet connection for API and map data.
+
+------------------------------------------------------------
+4. Installation Steps
+
+1. Clone repository
+   git clone https://github.com/yourusername/harvest-seer.git
+   cd harvest-seer
+
+2. Install backend dependencies
+   cd backend
+   pip install -r requirements.txt
+
+3. Install frontend dependencies
+   cd ..
+   npm install
+
+------------------------------------------------------------
+5. Running the Application
+
+Quick Start (Windows):
+- Double-click START_APP.bat
+  Backend: http://localhost:5000
+  Frontend: http://localhost:3000
+- Wait 10–15 seconds for initialization.
+
+Manual Start:
+1. Open two terminals.
+2. In the first terminal:
+   cd backend
+   python app.py
+3. In the second terminal:
+   cd ..
+   npm run dev
+Access via http://localhost:3000
+
+------------------------------------------------------------
+6. First-Time Setup
+
+- Generates synthetic data and trains the ML model (30–60 seconds).
+- Saves the model for future runs.
+- Ignore optional service warnings (MongoDB, AWS, etc.).
+- MAKE SURE TO WAIT FOR THE BACKEND TO COMPLETELY START SO EVERYTHING LOADS SUCCESFULLY.
+
+------------------------------------------------------------
+7. Using the App
+
+1. Select Location – GPS, manual entry, or map boundary.
+2. Choose Crop – Wheat, Rice, Cotton, Maize, etc.
+3. Analyze Risk – View risk score, key factors, and recommendations.
+
+------------------------------------------------------------
+8. Technical Overview
+
+Backend (Python/Flask):
+- app.py – Main API.
+- model.py, risk_calculator.py, recommendations.py – ML and analytics.
+- api_integrations.py, geospatial_processor.py – Data and map handling.
+
+Frontend (Next.js/React/TypeScript):
+- Interactive components for map, crop selection, and data visualization.
+
+------------------------------------------------------------
+9. API Endpoints
+
+GET /api/health – System status
+GET /api/crops – List crops
+POST /api/assess-risk – Assess risk
+GET /api/crop-info/<crop> – Crop details
+GET /api/environmental-data – Environmental data
+
+------------------------------------------------------------
+10. Troubleshooting
+
+- Empty dropdown: Wait 10–15 seconds, then refresh.
+- Port in use: Close existing process on port 5000/3000.
+- Model error: Delete trained model and restart.
+
+------------------------------------------------------------
+
+13. Acknowledgments
+
+- Data: OpenWeatherMap, Sentinel Hub.
+- Mapping: Mapbox, Leaflet, OpenStreetMap.
+- UI: TailwindCSS, Heroicons.
+- ML: scikit-learn.
+- Frameworks: Flask, Next.js.
+
+------------------------------------------------------------
+14. Roadmap
+
+- Real-time weather integration.
+- Satellite imagery processing.
+- Mobile app version.
+- Crop yield prediction.
+- Historical trend analysis.
+- Expert consultation feature.
+
+------------------------------------------------------------
+Made with love for farmers worldwide.
